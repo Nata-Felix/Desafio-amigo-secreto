@@ -20,7 +20,6 @@ function sortearAmigo() {
     alert("Adicione um amigo antes de sortear");
   } else {
     let sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
-    console.log(sorteado);
     document.getElementById("nomeSorteado").innerHTML = sorteado;
     listaDeSorteados.push(sorteado);
     listaAmigos.pop(sorteado);
