@@ -4,19 +4,19 @@
 :root {
     --background-primary: #020202;
     --background-secondary: #111012;
-        --background-tertiary: #24222E;
-        --background-brand: #C58DE7;
-        --content-primary: #FFF;
-        --content-secondary: #B3B3B3;
-        --content-tertiary: #7A7A7A;
-        --content-brand: #C58DE7;
-        --acent-pink: #D586E0;
-        --acent-blue: #91A1FA;
-        --font-primary: 'Sora', sans-serif;
-        --font-secundary: 'Roboto Flex', sans-serif;
-        --font-tertiary: 'Roboto Mono', monospace;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --content-primary: #FFF;
+    --content-secondary: #B3B3B3;
+    --content-tertiary: #7A7A7A;
+    --content-brand: #C58DE7;
+    --acent-pink: #D586E0;
+    --acent-blue: #91A1FA;
+    --font-primary: 'Sora', sans-serif;
+    --font-secundary: 'Roboto Flex', sans-serif;
+    --font-tertiary: 'Roboto Mono', monospace;
     --degrade-borda: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
-        --degrade-fundo: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
+    --degrade-fundo: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
 }
 
 * {
@@ -27,7 +27,7 @@
 
 html {
     background-color: var(--background-primary);
-        background-image: url(assets/Shapes.png);
+    background-image: url(assets/Shapes.png);
 }
 
 .corpo {
@@ -49,8 +49,8 @@ html {
 .secao-principal {
     box-sizing: border-box;
     display: flex;
-        flex-direction: column;
-        gap: 5px;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .secao-principal__h1 {
@@ -85,18 +85,18 @@ html {
     display: flex;
     flex-direction: column;
     width: 793.13px;
-        gap: 15px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
     flex: 1;
-        box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .secao-sorteio__input {
     font-size: 30px;
     font-family: var(--font-secundary);
     height: 50px;
-        width: 480px;
+    width: 480px;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
@@ -140,20 +140,20 @@ html {
     flex-wrap: wrap;
     gap: 10px;
     width: 500px;
-        height: 75px;
+    height: 75px;
 }
 
 #nome-participante {
     background-color: var(--content-primary);
-        color: var(--background-secondary);
-        font-size: 25px;
+    color: var(--background-secondary);
+    font-size: 25px;
     padding: 10px;
     border-radius: 8px;
     border-color: #D586E0;
     border: 2px solid;
     height: 75px;
-        width: 500px;
-        overflow-y: auto;
+    width: 500px;
+    overflow-y: auto;
 }
 
 .secao-sorteado {
@@ -181,6 +181,7 @@ html {
     width: 25px;
 
 }
+
 .secao-sorteado__button {
     background: var(--degrade-fundo);
     color: var(--content-primary);
@@ -192,10 +193,10 @@ html {
     border-color: #D586E0;
     margin: 10px;
     cursor: pointer;
-    }
+}
     
-    .secao-sorteado__button:hover {
-        background: var(--degrade-borda);
+.secao-sorteado__button:hover {
+    background: var(--degrade-borda);
 }
 
 .secao-sorteado__h3 {
