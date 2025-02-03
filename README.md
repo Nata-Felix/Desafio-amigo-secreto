@@ -35,6 +35,7 @@ O **Sorteador de Amigo Secreto** é uma aplicação web simples e divertida para
 
 ## 🛠️ Acesse o Projeto pelo link abaixo:
 [Acesse o Sorteador de Amigo Secreto](https://desafio-amigo-secreto-vert.vercel.app/)
+[Acesse o Sorteador de Amigo Secreto](https://nata-felix.github.io/Desafio-amigo-secreto/)
 
 ![Screenshot](assets/Screen.png)
 
