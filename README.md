@@ -33,21 +33,11 @@ O **Sorteador de Amigo Secreto** é uma aplicação web simples e divertida para
 └── ⚡ app.js        # Lógica do sorteio
 ```
 
-## 🛠️ Instalação e Execução
+## 🛠️ Acesse o Projeto pelo link abaixo:
+[Desafio Amigo Secreto]([https://www.google.com](https://desafio-amigo-secreto-vert.vercel.app/))
 
-```bash
-# Clone o repositório
-$ git clone https://github.com/seu-usuario/sorteador-amigo-secreto.git
 
-# Acesse a pasta do projeto
-$ cd sorteador-amigo-secreto
 
-# Abra o arquivo index.html no navegador
-```
-
-## 📜 Licença
-
-Este projeto está sob a licença MIT.
 
 ---
 
