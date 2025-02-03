@@ -26,15 +26,13 @@
 }
 
 html {
-    /* background-color: var(--background-tertiary); */
-    background-color: #020202;
-    background-image: url(assets/Linha.png);
+    background-color: var(--background-primary);
+        background-image: url(assets/Shapes.png);
 }
 
 .corpo {
-    /* background-color: var(--background-tertiary); */
     color: var(--content-primary);
-    /* background-image: url(assets/Shapes.png); */
+    background-image: url(assets/Linha.png);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -8,7 +8,7 @@ function mostrarLista() {
 function adicionarAmigo() {
   amigo = document.getElementById("amigo").value;
   if (amigo == "") {
-    alert("Digite um nome válido");
+    Swal.fire("Digite um nome válido");
   } else {
     listaAmigos.push(amigo);
     mostrarLista();
@@ -20,13 +20,13 @@ function removerAmigo() {
   let amigo = document.getElementById("amigo").value;
 
   if (amigo === "") {
-    alert("Digite o nome de um participante para remover");
+    Swal.fire("Digite o nome de um participante para remover");
   } else {
     let index = listaAmigos.indexOf(amigo);
     if (index !== -1) {
       listaAmigos.splice(index, 1);
     } else {
-      alert("Nome não encontrado na lista");
+      Swal.fire("Nome não encontrado na lista");
     }
     mostrarLista();
     document.getElementById("amigo").value = "";
@@ -55,7 +55,7 @@ function executarSorteio() {
 
 function sortearAmigo() {
   if (listaAmigos.length == 0) {
-    alert("Adicione um amigo antes de sortear");
+    Swal.fire("Adicione um amigo antes de sortear");
     return;
   }
   let sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
@@ -66,7 +66,7 @@ function sortearAmigo() {
 
 function sortearAmigoERemover() {
   if (listaAmigos.length == 0) {
-    alert("Adicione um amigo antes de sortear");
+    Swal.fire("Adicione um amigo antes de sortear");
     return;
   }
   let sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
