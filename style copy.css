@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 :root {
     --background-primary: #020202;
-    --background-secondary: #111012;
+        --background-secondary: #111012;
         --background-tertiary: #24222E;
         --background-brand: #C58DE7;
         --content-primary: #FFF;
@@ -15,8 +14,6 @@
         --font-primary: 'Sora', sans-serif;
         --font-secundary: 'Roboto Flex', sans-serif;
         --font-tertiary: 'Roboto Mono', monospace;
-    --degrade-borda: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
-        --degrade-fundo: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
 }
 
 * {
@@ -26,18 +23,17 @@
 }
 
 html {
-    /* background-color: var(--background-tertiary); */
-    background-color: #020202;
+    background-color: var(--background-primary);
     background-image: url(assets/Linha.png);
 }
 
 .corpo {
-    /* background-color: var(--background-tertiary); */
+    background-color: var(--background-tertiary);
     color: var(--content-primary);
-    /* background-image: url(assets/Shapes.png); */
+    background-image: url(assets/Shapes.png);
     display: flex;
     align-items: center;
-    justify-content: center;
+        justify-content: center;
     flex-direction: column;
     max-width: 100vw;
 }
@@ -46,6 +42,8 @@ html {
     display: flex;
     flex-direction: row;
     padding: 50px;
+        /* max-width: 100%; */
+            /* box-sizing: border-box; */
 }
 
 .secao-principal {
@@ -86,11 +84,11 @@ html {
 .secao-sorteio__form {
     display: flex;
     flex-direction: column;
-    width: 793.13px;
+        width: 793.13px;
         gap: 15px;
     justify-content: center;
     align-items: center;
-    flex: 1;
+        flex: 1;
         box-sizing: border-box;
 }
 
@@ -98,7 +96,7 @@ html {
     font-size: 30px;
     font-family: var(--font-secundary);
     height: 50px;
-        width: 480px;
+    width: 482px;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
@@ -123,19 +121,16 @@ html {
 }
 
 .secao-sorteio__button {
-    background: var(--degrade-fundo);
+    background-color: var(--background-tertiary);
     color: var(--content-primary);
     font-size: 30px;
     font-family: var(--font-secundary);
     height: 56px;
-    width: 240px;
+    width: 50%;
     border-radius: 8px;
-    cursor: pointer;
+    border-color: #D586E0;
 }
 
-.secao-sorteio__button:hover {
-    background: var(--degrade-borda);
-}
 .secao-sorteio__lista {
     display: flex;
     padding: 0px;
@@ -146,10 +141,8 @@ html {
 }
 
 #nome-participante {
-    background-color: var(--content-primary);
-        color: var(--background-secondary);
-        font-size: 25px;
-    padding: 10px;
+    font-size: 25px;
+        padding: 10px;
     border-radius: 8px;
     border-color: #D586E0;
     border: 2px solid;
@@ -161,30 +154,13 @@ html {
 .secao-sorteado {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+        justify-content: center;
     align-items: center;
     gap: 10%;
 }
 
-.secao-sorteado__div {
-    display: flex;
-    gap: 10px;
-    font-size: 25px;
-}
-
-.secao-sorteado__h3 {
-    color: var(--content-primary);
-    font-family: var(--font-tertiary);
-    font-size: 20px;
-    text-align: center;
-}
-
-.secao-sorteado__checkbox {
-    width: 25px;
-
-}
 .secao-sorteado__button {
-    background: var(--degrade-fundo);
+    background-color: var(--background-tertiary);
     color: var(--content-primary);
     font-size: 30px;
     font-family: var(--font-secundary);
@@ -193,11 +169,6 @@ html {
     border-radius: 8px;
     border-color: #D586E0;
     margin: 10px;
-    cursor: pointer;
-    }
-    
-    .secao-sorteado__button:hover {
-        background: var(--degrade-borda);
 }
 
 .secao-sorteado__h3 {
@@ -205,12 +176,15 @@ html {
     font-family: var(--font-tertiary);
     font-size: 20px;
     text-align: justify;
-}
-
-#nomeSorteado {
-    text-align: center;
-    font-size: 65px;
-    border-color: #D586E0;
-    height: 75px;
-    width: 500px;
+    max-width: 100%;
+    margin-top: 25px;
+    }
+    
+    
+    #nomeSorteado {
+        text-align: center;
+        font-size: 65px;
+        border-color: #D586E0;
+        height: 75px;
+        width: 500px;
 }

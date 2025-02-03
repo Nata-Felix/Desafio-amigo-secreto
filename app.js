@@ -12,36 +12,69 @@ function adicionarAmigo() {
   } else {
     listaAmigos.push(amigo);
     mostrarLista();
+    document.getElementById("amigo").value = "";
+  }
+}
+
+function removerAmigo() {
+  let amigo = document.getElementById("amigo").value;
+
+  if (amigo === "") {
+    alert("Digite o nome de um participante para remover");
+  } else {
+    let index = listaAmigos.indexOf(amigo);
+    if (index !== -1) {
+      listaAmigos.splice(index, 1);
+    } else {
+      alert("Nome não encontrado na lista");
+    }
+    mostrarLista();
+    document.getElementById("amigo").value = "";
   }
 }
 
 function fogosArtificio() {
-  campoNomeSorteado = document.getElementById("nomeSorteado").value;
-  if (campoNomeSorteado !== "") {
-    document
-      .getElementById("secao-sorteado__botao")
-      .addEventListener("click", function () {
-        for (let i = 0; i < 5; i++) {
-          setTimeout(() => {
-            confetti({
-              particleCount: 100,
-              spread: 70,
-              origin: { x: Math.random(), y: Math.random() * 0.6 },
-            });
-          }, i * 500);
-        }
-      });
-  } // Adicionando a chave de fechamento aqui
+  if (document.getElementById("nomeSorteado").textContent !== "") {
+    for (let i = 0; i < 5; i++) {
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { x: Math.random(), y: Math.random() * 0.6 },
+        });
+      }, i * 500);
+    }
+  }
+}
+
+function executarSorteio() {
+  document.getElementById("naoRepetir").checked
+    ? sortearAmigoERemover()
+    : sortearAmigo();
 }
 
 function sortearAmigo() {
   if (listaAmigos.length == 0) {
     alert("Adicione um amigo antes de sortear");
-  } else {
-    let sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
-    document.getElementById("nomeSorteado").innerHTML = sorteado;
-    listaDeSorteados.push(sorteado);
-    listaAmigos.pop(sorteado);
-    mostrarLista();
+    return;
   }
+  let sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
+  document.getElementById("nomeSorteado").innerHTML = sorteado;
+  mostrarLista();
+  fogosArtificio();
+}
+
+function sortearAmigoERemover() {
+  if (listaAmigos.length == 0) {
+    alert("Adicione um amigo antes de sortear");
+    return;
+  }
+  let sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
+  document.getElementById("nomeSorteado").innerHTML = sorteado;
+  let index = listaAmigos.indexOf(sorteado);
+  if (index !== -1) {
+    listaAmigos.splice(index, 1);
+  }
+  mostrarLista();
+  fogosArtificio();
 }
